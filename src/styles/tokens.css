@@ -1,0 +1,40 @@
+/* Tokens de diseño BJXMODA */
+:root {
+  --paper: #F5F5F5;
+  --ink: #111111;
+  --white: #FFFFFF;
+  --rule: #D8D8D8;
+  --ink-2: #4A4A4A; /* texto secundario: contraste 8.1:1 sobre --paper */
+  --error: #A3122A;
+
+  /* tonos de arquetipo (también en src/data/archetypeStyles.js) */
+  --avant: #1F2FD1;
+  --icon: #4E1220;
+  --icon-gold: #C7AE76;
+  --street: #111111;
+  --street-tape: #F2C200;
+  --muse: #D9B9C6;
+  --muse-ink: #33182F;
+
+  --serif: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --sans: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  /* escala tipográfica (razón ~1.333) */
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.333rem;
+  --step-2: 1.777rem;
+  --step-3: clamp(2rem, 1.5rem + 2.4vw, 3.157rem);
+  --step-4: clamp(2.5rem, 1.6rem + 4.4vw, 5.2rem);
+
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+  --max: 1320px;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+/* Colores por arquetipo reutilizables */
+.arch--avant_garde { --arch-ground: var(--avant); --arch-ink: var(--white); --arch-accent: var(--ink); }
+.arch--icon { --arch-ground: var(--icon); --arch-ink: #F3EBDD; --arch-accent: var(--icon-gold); }
+.arch--street_creative { --arch-ground: var(--street); --arch-ink: var(--paper); --arch-accent: var(--street-tape); }
+.arch--muse { --arch-ground: var(--muse); --arch-ink: var(--muse-ink); --arch-accent: #7D3F6E; }
+

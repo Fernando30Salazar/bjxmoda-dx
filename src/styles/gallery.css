@@ -1,0 +1,119 @@
+/* New Faces */
+.faces__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 2rem;
+  align-items: end;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1.5rem;
+}
+.faces__count {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-1);
+  font-variant-numeric: lining-nums;
+}
+.faces__lede {
+  grid-column: 1 / -1;
+  color: var(--ink-2);
+  max-width: 56ch;
+}
+@media (max-width: 640px) {
+  .faces__head {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 1.5rem 2rem;
+}
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--ink);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+.filter__count {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+.filter[aria-pressed='true'] {
+  background: var(--arch-ground, var(--ink));
+  border-color: var(--arch-ground, var(--ink));
+  color: var(--arch-ink, var(--paper));
+}
+.filter:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.faces__status {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  padding-block: 3rem;
+  font-family: var(--serif);
+  font-size: var(--step-1);
+}
+.faces__status--error p {
+  color: var(--error);
+}
+
+/* Cada participante como una gafete en el tablero de casting */
+.faces__grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: 6px;
+}
+.face {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 0.4rem;
+  min-height: 12rem;
+  padding: 1.1rem 1.1rem 1rem;
+  background: var(--white);
+  border-top: 6px solid var(--arch-ground);
+}
+.arch--street_creative.face {
+  border-top-color: var(--street-tape);
+}
+.arch--muse.face {
+  border-top-color: var(--arch-accent);
+}
+.face__name {
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+  align-self: end;
+}
+.face__arch {
+  font-style: italic;
+  font-family: var(--serif);
+}
+.face__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+  border-top: 1px solid var(--rule);
+  padding-top: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.face__code {
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}

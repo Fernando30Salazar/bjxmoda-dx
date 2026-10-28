@@ -1,0 +1,11 @@
+# Configuración mínima para Supabase CLI (local y deploy de funciones).
+project_id = "bjxmoda"
+
+# Las funciones validan todo por sí mismas y usan la service_role solo en el
+# servidor. verify_jwt = false permite llamarlas con la clave publishable
+# (sb_publishable_…), que no es un JWT. Con claves legacy `anon` también funciona.
+[functions.register-participant]
+verify_jwt = false
+
+[functions.manage-participation]
+verify_jwt = false

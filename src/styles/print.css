@@ -1,0 +1,37 @@
+/* Impresión / Guardar como PDF: solo la tarjeta, a tamaño de página */
+@media print {
+  @page {
+    size: A5 portrait;
+    margin: 10mm;
+  }
+  body {
+    background: #fff;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .print-card,
+  .print-card * {
+    visibility: visible;
+  }
+  .print-card {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+  .print-card .identity-card {
+    width: auto;
+    height: 100%;
+    max-height: 190mm;
+    box-shadow: none;
+    background: none;
+  }
+  .print-card .identity-card__img {
+    animation: none;
+    width: auto;
+    height: 100%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
